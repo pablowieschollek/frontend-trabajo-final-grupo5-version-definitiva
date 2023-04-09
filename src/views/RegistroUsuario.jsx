@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 
 import MyContext from '../MyContext';
+import { useNavigate } from "react-router-dom";
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -9,7 +10,8 @@ import Form from 'react-bootstrap/Form';
 import RegistroExitosoModal from '../components/ModalRegistro';
 
 const Registro = () => {
-  const { setExitoRegistro } = useContext(MyContext);
+  //const { setExitoRegistro } = useContext(MyContext);
+  const navigate = useNavigate();
   
   const [ nombre, setNombre ]         = useState("");
   const [ edad, setEdad ]             = useState("");
@@ -32,7 +34,9 @@ const Registro = () => {
             body: JSON.stringify({'nombre':nombre,'edad':edad, 'direccion':direccion, 'correo':correo, 'contrasena':contrasena, 'telefono':telefono})
           };               
           await fetch('https://proyectofinalgrupo5.pwieschollek.repl.co/registro', requestRegistro)
-          setExitoRegistro(true)
+          //setExitoRegistro(true)
+          alert("Perfil creado con éxito!")
+          navigate("/login");
         } catch (err) {
             console.error( `Error: ${err} ` )
         }       
