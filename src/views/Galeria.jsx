@@ -6,10 +6,9 @@ import Cards from '../components/Cards';
 
 
 const Galeria = () => {
-  const {products, handlerSearching, priceFilter, changeState, searchConcept} = useContext(MyContext);  
+  const {products, handlerSearching, priceFilter, changeState} = useContext(MyContext);  
 
-  //console.log(priceFilter)
-  console.log(handlerSearching)
+
  
 
   if( changeState === 0 ) {

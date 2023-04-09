@@ -26,7 +26,7 @@ const Formulario = () => {
             headers : { 'Content-Type': 'application/json' },
             body: JSON.stringify({"idusuario":idUser,"titulo":titulo,"imagen":imagen,"descripcion":descripcion,"precio":precio,"correoProducto":correoProducto,"telefonoProducto":telefonoProducto})  
           };        
-          await fetch( 'https://proyectofinalgrupo5.pwieschollek.repl.co', requestAgregarProducto);
+          await fetch( 'https://proyectofinalgrupo5.pwieschollek.repl.co/productos', requestAgregarProducto);
           navigate("/galeria/")
         } catch (err) {
             console.error(`Error: ${err} `)

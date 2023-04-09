@@ -7,14 +7,6 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 const InfoProducto = () => {
   const { products } = useContext(MyContext);
   const { id } = useParams();
-  //console.log(products)
-  console.log(id)
-
-  //const prueba = products.find((prod) => prod.idproducto === id);
-  //const getId = products.map((info) => info.idproducto);
-
-  
-  //console.log(prueba);
   
   return (
     <div>

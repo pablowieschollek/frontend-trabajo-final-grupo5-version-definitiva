@@ -22,7 +22,7 @@ const Login = () => {
         headers : { 'Content-Type': 'application/json' },
         body    : JSON.stringify({"correo": correoIngresado, "contrasena":contrasenaIngresada})
       };      
-      const response = await fetch('https://proyectofinalgrupo5.pwieschollek.repl.co', requestOptions);
+      const response = await fetch('https://proyectofinalgrupo5.pwieschollek.repl.co/login', requestOptions);
       if (!response.ok) {throw new Error(`HTTP error! status: ${response.status}`)};
       const data  = await response.json(); 
       var getToken = data.token;
@@ -31,7 +31,7 @@ const Login = () => {
     } catch (err) {console.error(`Error: ${err} `)};
 
     try {
-      const response = await fetch("https://proyectofinalgrupo5.pwieschollek.repl.co", {method: 'GET'});
+      const response = await fetch("https://proyectofinalgrupo5.pwieschollek.repl.co/perfil", {method: 'GET'});
       const dataUsuarios = await response.json();
       setUsers(dataUsuarios);
       setIdUser(getidUsuario);        
@@ -39,7 +39,7 @@ const Login = () => {
     } catch (err) {console.error(`Error: ${err} `)};
     
     try{  
-      const response = await fetch("https://proyectofinalgrupo5.pwieschollek.repl.co", {method: 'GET'});
+      const response = await fetch("https://proyectofinalgrupo5.pwieschollek.repl.co/productos", {method: 'GET'});
       const dataProductos = await response.json();
       setProducts(dataProductos)
     } catch (err) {console.error(`Error: ${err} `)};
