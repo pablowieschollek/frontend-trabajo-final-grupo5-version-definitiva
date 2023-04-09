@@ -21,7 +21,7 @@ function RegistroExitosoModal() {
         <p>¡Ya eres parte de nuestra comunidad! <br/> Ahora inicia tu sesión.</p>
       </Modal.Body>
 
-      <Nav.Link href="/login"> 
+      <Nav.Link href="/login/"> 
         <Button variant="primary"> Iniciar sesión </Button>
       </Nav.Link> 
     </Modal>
