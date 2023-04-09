@@ -25,7 +25,6 @@ function App() {
   const [ users, setUsers ]                       = useState([]);
   const [ minPrice, setMinPrice ]                 = useState (0);
   const [ maxPrice, setMaxPrice ]                 = useState (0);
-  const [ exitoRegistro, setExitoRegistro ]       = useState(false);
   const [ searchConcept, setSearchConcept ]       = useState("");
   const [ idUser, setIdUser]                      = useState([]);
   const [ priceFilter, setPriceFilter ]           = useState([]);  
@@ -38,7 +37,6 @@ function App() {
                         priceFilter, setPriceFilter,
                         minPrice, setMinPrice,
                         maxPrice, setMaxPrice,
-                        exitoRegistro, setExitoRegistro,
                         searchConcept, setSearchConcept,
                         handlerSearching, setHandlerSearching,
                         idUser, setIdUser,
