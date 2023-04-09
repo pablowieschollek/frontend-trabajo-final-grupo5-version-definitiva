@@ -11,7 +11,7 @@ function RegistroExitosoModal() {
   const { exitoRegistro } = useContext(MyContext);
 
   return (
-    <Modal className="modalShow" show={ exitoRegistro }>
+    <Modal className="modalShow" /*show={ exitoRegistro }*/>
       
       <Modal.Header>
         <Modal.Title>Registro Exitoso</Modal.Title>
