@@ -31,7 +31,7 @@ const Registro = () => {
             headers : { 'Content-Type': 'application/json' },
             body: JSON.stringify({'nombre':nombre,'edad':edad, 'direccion':direccion, 'correo':correo, 'contrasena':contrasena, 'telefono':telefono})
           };               
-          await fetch('http://localhost:3001/registro', requestRegistro)
+          await fetch('https://proyectofinalgrupo5.pwieschollek.repl.co', requestRegistro)
           setExitoRegistro(true)
         } catch (err) {
             console.error( `Error: ${err} ` )
